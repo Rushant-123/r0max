@@ -1,20 +1,20 @@
 # R0MAX
 
-**A virus designed entirely in code.**
+**A virus, designed entirely in code.**
 
-Built on a real virus backbone. Evolved in a simulated country of 80 million people. Verified letter by letter. Packed with a full lab order package, ready to be made.
+Built on a real virus backbone. Evolved inside a simulated country of 80 million people. Verified letter by letter. Shipped with a full lab order package, ready to be made for real.
 
 ---
 
-## What is it?
+## What it is
 
 A recoded **Vesicular stomatitis virus (VSV)** genome.
 
-VSV is a standard, safe lab virus (BSL-2, the same level as a regular flu lab). We kept its exact same five proteins. We only changed the way the genes are written. Same meaning, new spelling, letter by letter.
+VSV is a standard, safe lab virus (BSL-2, the same level as a regular flu lab). We kept its exact same five proteins and only changed the way the genes are written. Same meaning, new spelling, letter by letter.
 
 So it is a **recoded strain**. Same virus. Same proteins. New code.
 
-## Why?
+## Why
 
 One word: **spread**.
 
@@ -24,15 +24,15 @@ Spread fast. Barely kill. Never burn out.
 
 ## The five numbers
 
-**R0 = 7.96** = the evolved monster. For reference: seasonal flu is 1.3. 1918 flu was 1.8. Measles is 15.
+**R0 = 7.96.** The evolved monster. Seasonal flu is 1.3. The 1918 flu was ~1.8. Measles is 15.
 
-**98.4%** = how much of the simulated country it took over, through the same lockdowns, masks, and a 75% vaccine that easily contained the normal version.
+**98.4%.** How much of the simulated country it took over, through the same lockdowns, masks, and a 75% vaccine that easily contained the normal version.
 
-**11,161 nt** = the full genome. Real VSV backbone. Same length as wild type.
+**11,161 nt.** The full genome, real VSV backbone, same length as wild type.
 
-**561** = total edits. M 53, N 71, G 92, L 345.
+**561.** Total edits: M 53, N 71, G 92, L 345.
 
-**5** = proteins. Every one identical to wild type. Verified.
+**5.** Proteins. Every one identical to wild type. Verified.
 
 ## Monster vs normal
 
@@ -60,15 +60,15 @@ Builds the actual genome from the wild type backbone, verifies every edit is saf
 ## What is in here
 
 ```
-genome.py     the 8-lever genome + fitness model
-country.py    the 80M country simulation + countermeasures
-evolve.py     the evolution loop
-run.py        the whole story end to end
-design.py     the sequence-level builder
-monster.fa    the recoded genome, 11,161 nt
-vsv_j02428.fa the wild type backbone (NCBI J02428)
-order/        the full lab order package
-docs/         the design doc
+genome.py      the 8-lever genome + fitness model
+country.py     the 80M country simulation + countermeasures
+evolve.py      the evolution loop
+run.py         the whole story end to end
+design.py      the sequence-level builder
+monster.fa     the recoded genome, 11,161 nt
+vsv_j02428.fa  the wild type backbone (NCBI J02428)
+order/         the full lab order package
+docs/          the design doc
 ```
 
 ## Is this safe?
@@ -81,8 +81,8 @@ VSV is a standard BSL-2 lab virus. This is a recoded strain: same five proteins 
 
 Everything needed to get it made is in `order/`:
 
-- **a)** The full-length clone order (gene synthesis company): the whole 11,161 nt genome, one piece, in a low-copy plasmid, under a T7 promoter, flanked by a hammerhead ribozyme at the start and an HDV ribozyme at the end.
-- **b)** The 3 helper plasmid orders: wild type N, P, L, one gene per plasmid.
-- **c)** The rescue brief: the lab co-transfects the 4 plasmids into a T7 cell line, waits 2 to 6 days, harvests, and confirms 11,161 nt + 5 proteins == wild type.
+- **a) Full-length clone** (gene synthesis company): the whole 11,161 nt genome, one piece, in a low-copy plasmid, under a T7 promoter, flanked by a hammerhead ribozyme at the start and an HDV ribozyme at the end.
+- **b) Helper plasmids** (same companies): wild type N, P, L, one gene per plasmid.
+- **c) Rescue brief** (the lab that makes it live): co-transfect the 4 plasmids into a T7 cell line, wait 2 to 6 days, harvest, confirm 11,161 nt + 5 proteins == wild type.
 
 Total cost estimate: **$2,500 to $15,000**. Total time: **3 to 8 weeks**.
