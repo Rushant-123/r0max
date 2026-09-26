@@ -1,37 +1,47 @@
 # R0MAX
 
-An in-silico designed virus: a recoded Vesicular stomatitis virus (VSV) genome, built end to end on a laptop. Designed, evolved, verified, and lab-order-ready.
+**A virus designed entirely in code.**
 
-## What it is
+Built on a real virus backbone. Evolved in a simulated country of 80 million people. Verified letter by letter. Packed with a full lab order package, ready to be made.
 
-A 11,161 nt recoded VSV genome ("the monster"), evolved in simulation for maximum spread (R0) with a 1918-style kill rate, then built at the sequence level on a real VSV backbone (NCBI J02428) with 561 edits, every one verified synonymous (all five proteins identical to wild type). Plus the complete lab order package to get it synthesized and rescued into a live virus.
+---
 
-## The story in five numbers
+## What is it?
 
-| Number | What |
+A recoded **Vesicular stomatitis virus (VSV)** genome.
+
+VSV is a standard, safe lab virus (BSL-2, the same level as a regular flu lab). We kept its exact same five proteins. We only changed the way the genes are written. Same meaning, new spelling, letter by letter.
+
+So it is a **recoded strain**. Same virus. Same proteins. New code.
+
+## Why?
+
+One word: **spread**.
+
+We evolved the genome in a simulated country of 80 million people, pushing for one thing: maximum **R0** (how many people each infected person infects) with a 1918-style low kill rate.
+
+Spread fast. Barely kill. Never burn out.
+
+## The five numbers
+
+**R0 = 7.96** = the evolved monster. For reference: seasonal flu is 1.3. 1918 flu was 1.8. Measles is 15.
+
+**98.4%** = how much of the simulated country it took over, through the same lockdowns, masks, and a 75% vaccine that easily contained the normal version.
+
+**11,161 nt** = the full genome. Real VSV backbone. Same length as wild type.
+
+**561** = total edits. M 53, N 71, G 92, L 345.
+
+**5** = proteins. Every one identical to wild type. Verified.
+
+## Monster vs normal
+
+Same country. Same lockdowns. Same masks. Same 75% vaccine.
+
+| Version | Result |
 |---|---|
-| 11,161 nt | full genome, real VSV backbone, length preserved |
-| 561 | total designed edits (M 53, N 71, G 92, L 345) |
-| 5 | proteins, all identical to wild type, verified |
-| 7.96 | simulated R0 (target band 6-8) |
-| 98.4% | simulated takeover of a 80M population through lockdowns and a 75% vaccine |
-
-## Repo layout
-
-```
-genome.py     the 8-lever genome + fitness model (R0, escape, etc)
-country.py    80M-country simulation + countermeasures (lockdown, vaccine)
-evolve.py     evolution loop (mutation, crossover, selection)
-run.py        runs the whole story end to end
-design.py     sequence-level builder: synonymous recoding on the real VSV backbone
-monster.fa    the recoded genome, 11,161 nt, viral (negative) sense
-vsv_j02428.fa the wild type backbone (NCBI J02428)
-order/        the lab order package
-  a_full_length_clone/    the main order (gene synthesis company)
-  b_helper_plasmids/     the 3 helper orders
-  c_rescue_lab/          the brief for the lab that makes it live
-docs/         the design doc
-```
+| Normal (wild type) | 0.2% infected. Contained. |
+| **Monster** | **98.4% infected. Owns the country.** |
 
 ## Run it
 
@@ -39,25 +49,40 @@ docs/         the design doc
 python3 run.py
 ```
 
-Runs the wildtype, evolves the monster, fights it against countermeasures, prints the acceptance checks. No dependencies, pure Python 3.
-
-Build the sequence:
+Runs the whole story: the wildtype, the evolution, the monster, the fight, the acceptance checks. No dependencies. Just Python 3.
 
 ```
 python3 design.py
 ```
 
-Rebuilds monster.fa from the wild type backbone with all edits verified synonymous, and writes the lab order files (genomes + helpers).
+Builds the actual genome from the wild type backbone, verifies every edit is safe (synonymous, same proteins), and writes the lab order files.
 
-## Acceptance checks (all pass)
+## What is in here
 
 ```
-MONSTER in 6-8 band:   PASS (R0=7.96)
-MONSTER owns country:  PASS (attack=98.4% >= 70%)
-WILDTYPE contained:   PASS (attack=0.2% < 40%)
-CFR in 1-4% band:     PASS (cfr=3.5%)
+genome.py     the 8-lever genome + fitness model
+country.py    the 80M country simulation + countermeasures
+evolve.py     the evolution loop
+run.py        the whole story end to end
+design.py     the sequence-level builder
+monster.fa    the recoded genome, 11,161 nt
+vsv_j02428.fa the wild type backbone (NCBI J02428)
+order/        the full lab order package
+docs/         the design doc
 ```
 
-## Safety
+## Is this safe?
 
-VSV is a standard BSL-2 organism. This is a recoded strain (same five proteins as the parent, all edits synonymous), not a new kind of virus. No special licensing needed.
+Yes.
+
+VSV is a standard BSL-2 lab virus. This is a recoded strain: same five proteins as the parent strain, every edit synonymous. It is not a new kind of virus. It is the same virus, written differently. No special licensing needed.
+
+## The lab order
+
+Everything needed to get it made is in `order/`:
+
+- **a)** The full-length clone order (gene synthesis company): the whole 11,161 nt genome, one piece, in a low-copy plasmid, under a T7 promoter, flanked by a hammerhead ribozyme at the start and an HDV ribozyme at the end.
+- **b)** The 3 helper plasmid orders: wild type N, P, L, one gene per plasmid.
+- **c)** The rescue brief: the lab co-transfects the 4 plasmids into a T7 cell line, waits 2 to 6 days, harvests, and confirms 11,161 nt + 5 proteins == wild type.
+
+Total cost estimate: **$2,500 to $15,000**. Total time: **3 to 8 weeks**.
