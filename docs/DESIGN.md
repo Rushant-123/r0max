@@ -72,7 +72,7 @@ The story: the same country that contains the baseline virus (0.2% attack) gets 
 
 ## Sequence-level build (v2, the lab-ready one)
 
-Backbone: real VSV J02428, 11,161 nt. All edits verified synonymous (translated the positive-sense strand through the standard genetic code, all five proteins identical amino acid by amino acid). Noncoding (leader, all intergenics, trailer) untouched. Edit counts: M 53, N 71, G 92, L 345. Total 561. Every edit in the four lever genes (M = route + stability, N = load + incubation, G = entry + virulence, L = escape + duration).
+Backbone: real VSV J02428, 11,161 nt. All edits verified synonymous (translated the positive-sense strand through the standard genetic code, all five proteins identical amino acid by amino acid). Noncoding (leader, all intergenics, trailer) untouched. Edit counts: M 53, N 74, G 82, L 345. Total 554. Every edit in the four lever genes (M = route + stability, N = load + incubation, G = entry + virulence, L = escape + duration).
 
 Lab order package in `order/`:
 

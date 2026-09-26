@@ -4,7 +4,7 @@ Date: 2026-09-27
 
 ## What this is
 
-A complete order package for one synthetic virus: a recoded Vesicular stomatitis virus (VSV) genome, 11,161 nt, 561 edits, every edit verified synonymous (same proteins as wild type). Designed and verified in silico on this machine.
+A complete order package for one synthetic virus: a recoded Vesicular stomatitis virus (VSV) genome, 11,161 nt, 554 edits, every edit verified synonymous (same proteins as wild type). Designed and verified in silico on this machine.
 
 ## Package contents
 

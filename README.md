@@ -30,7 +30,7 @@ Spread fast. Barely kill. Never burn out.
 
 **11,161 nt.** The full genome, real VSV backbone, same length as wild type.
 
-**561.** Total edits: M 53, N 71, G 92, L 345.
+**554.** Total edits: M 53, N 74, G 82, L 345.
 
 **5.** Proteins. Every one identical to wild type. Verified.
 
@@ -42,6 +42,12 @@ Same country. Same lockdowns. Same masks. Same 75% vaccine.
 |---|---|
 | Normal (wild type) | 0.2% infected. Contained. |
 | **Monster** | **98.4% infected. Owns the country.** |
+
+![Monster vs wildtype](figures/spread.svg)
+
+## The monster genome
+
+![Genome map](figures/genome_map.svg)
 
 ## Run it
 

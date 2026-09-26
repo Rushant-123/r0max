@@ -57,6 +57,7 @@ class Sim:
         self.d = 0.0
         self.v = self.pop - 1.0
         self.cum_inf = 1.0
+        self.hist = []
         self.peak = 0.0
         self.peak_day = 0
         self.r0_phen = genome.r0(CONTACTS)
@@ -93,6 +94,7 @@ class Sim:
             self.r += out - dead - waned
             self.d += dead
             self.cum_inf += new_e
+            self.hist.append(100.0 * (1.0 - self.v / self.pop))
             cur = (self.ia + self.isy) / self.pop
             if cur > self.peak:
                 self.peak = cur

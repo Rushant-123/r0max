@@ -2,14 +2,14 @@ import random
 
 MONSTER_GENES = {
     "route": 1.0,
-    "entry": 0.5,
-    "load": 1.0,
-    "stability": 0.47,
-    "duration": 0.18,
+    "entry": 0.84,
+    "load": 0.93,
+    "stability": 0.97,
+    "duration": 0.24,
     "incubation": 0.0,
-    "asymptomatic": 0.0,
+    "asymptomatic": 0.15,
     "escape": 1.0,
-    "virulence": 0.9,
+    "virulence": 0.77,
 }
 
 # VSV J02428 genome map, 11161 nt, negative strand
